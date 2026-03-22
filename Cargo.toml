@@ -1,0 +1,9 @@
+[package]
+name = "lattice"
+version = "0.1.0"
+edition = "2024"
+description = "A terminal-based cellular automaton explorer"
+license = "MIT"
+
+[dependencies]
+crossterm = "0.28"
