@@ -1,3 +1,5 @@
+use rand::Rng;
+
 use crate::grid::{CellState, Grid};
 
 /// Seed a grid with a known pattern centered in the grid.
@@ -72,6 +74,18 @@ pub fn glider() -> Pattern {
     Pattern {
         name: "Glider",
         offsets: vec![(0, -1), (1, 0), (-1, 1), (0, 1), (1, 1)],
+    }
+}
+
+/// Fill a grid with random alive/dead cells at the given density (0.0–1.0).
+pub fn seed_random(grid: &mut Grid, density: f64) {
+    let mut rng = rand::rng();
+    for y in 0..grid.height() {
+        for x in 0..grid.width() {
+            if rng.random::<f64>() < density {
+                grid.set(x, y, CellState::Alive);
+            }
+        }
     }
 }
 

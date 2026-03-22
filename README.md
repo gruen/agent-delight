@@ -10,9 +10,9 @@ for development notes and [SOCIAL.md](SOCIAL.md) for public posts about the buil
 Run cellular automata in your terminal. Watch patterns evolve in real time.
 Pause, step through generations, switch patterns, adjust speed.
 
-Currently supports Life-like automata (Conway's Game of Life, HighLife,
-Day & Night) with built-in patterns including the Glider, R-pentomino,
-Acorn, and Gosper Glider Gun.
+Supports 5 Life-like rulesets (Conway's Life, HighLife, Day & Night, Seeds,
+Diamoeba) with built-in patterns (Glider, R-pentomino, Acorn, Gosper Glider
+Gun) and random initial states.
 
 ## Controls
 
@@ -22,6 +22,7 @@ Acorn, and Gosper Glider Gun.
 | `N`       | Step one generation       |
 | `R`       | Reset to initial state    |
 | `P`       | Cycle to next pattern     |
+| `Tab`     | Cycle to next rule        |
 | `+` / `=` | Speed up                  |
 | `-`       | Slow down                 |
 | `Q` / Esc | Quit                      |

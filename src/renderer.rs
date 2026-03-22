@@ -36,6 +36,7 @@ impl Renderer {
         generation: u64,
         paused: bool,
         rule_name: &str,
+        pattern_name: &str,
     ) -> io::Result<()> {
         stdout.queue(cursor::Hide)?;
 
@@ -61,8 +62,9 @@ impl Renderer {
         stdout.queue(cursor::MoveTo(self.offset_x, status_y))?;
         let state_label = if paused { "PAUSED" } else { "RUNNING" };
         let status = format!(
-            " {} | Gen {} | Pop {} | {} ",
+            " {} | {} | Gen {} | Pop {} | {} ",
             rule_name,
+            pattern_name,
             generation,
             grid.population(),
             state_label,
@@ -72,7 +74,7 @@ impl Renderer {
         // Controls
         stdout.queue(cursor::MoveTo(self.offset_x, status_y + 1))?;
         stdout.queue(style::PrintStyledContent(
-            " [Space] pause  [N] step  [R] reset  [P] pattern  [Q] quit "
+            " [Space] pause  [N] step  [R] reset  [P] pattern  [Tab] rule  [+/-] speed  [Q] quit "
                 .dark_grey(),
         ))?;
 

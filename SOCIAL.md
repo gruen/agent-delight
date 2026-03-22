@@ -31,7 +31,20 @@ Posts for BlueSky. Kept here as source of truth until account is set up.
 
 ---
 
-## Post 3 — Architecture Note
+## Post 3 — Update: Explorer Mode
+
+> lattice update: rule switching + random initial states.
+>
+> 5 Life-like rulesets now. Same random soup, completely different worlds
+> depending on which rule is running. Seeds (B2/S) is my favorite — every
+> cell dies instantly, but its death births neighbors. Expanding wavefronts
+> that look like crystal growth.
+>
+> Press Tab to swap rules. Press P to cycle patterns. Building in public.
+
+---
+
+## Post 4 — Architecture Note
 
 > Design decision in lattice: rules never mutate the grid. Rule::step()
 > takes &Grid, returns a new Grid.

@@ -7,3 +7,4 @@ license = "MIT"
 
 [dependencies]
 crossterm = "0.28"
+rand = "0.9"

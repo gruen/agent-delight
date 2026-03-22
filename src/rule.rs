@@ -74,6 +74,17 @@ impl LifeLike {
     }
 }
 
+/// Returns all built-in Life-like rules.
+pub fn all_rules() -> Vec<LifeLike> {
+    vec![
+        LifeLike::conway(),
+        LifeLike::highlife(),
+        LifeLike::day_and_night(),
+        LifeLike::new("Seeds", &[2], &[]),
+        LifeLike::new("Diamoeba", &[3, 5, 6, 7, 8], &[5, 6, 7, 8]),
+    ]
+}
+
 impl Rule for LifeLike {
     fn name(&self) -> &str {
         &self.name
